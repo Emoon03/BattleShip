@@ -1,16 +1,10 @@
 =:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
 CIS 1200 Game Project README
-PennKey: ericmoon
 =:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
 
 ===================
 =: Core Concepts :=
 ===================
-
-- List the four core concepts, the features they implement, and why each feature
-  is an appropriate use of the concept. Incorporate the feedback you got after
-  submitting your proposal.
-
   1. 2D Arrays: 2D arrays allow me to represent the game board for my battleship game.
                 The rows and columns of the array will determine the size of the game board.
                 I will be able to change the values of the elements in the arrays to represent
@@ -43,24 +37,9 @@ PennKey: ericmoon
                                   that were purely for testing, which set up a model of the BattleShip game without
                                   the element of randomness. This is an appropriate use of the concept because it tests
                                   the encapsulated game model that functions independently of the GUI.
-
-  All of these concepts were approved by my TAs.
-
-===============================
-=: File Structure Screenshot :=
-===============================
-- Include a screenshot of your project's file structure. This should include
-  all of the files in your project, and the folders they are in. You can
-  upload this screenshot in your homework submission to gradescope, named 
-  "file_structure.png".
-
 =========================
-=: Your Implementation :=
+=:Implementation :=
 =========================
-
-- Provide an overview of each of the classes in your code, and what their
-  function is in the overall game.
-
   GameBoard - This class instantiates a BattleShip object, which is the model for the game.
                As the user clicks the game board, the model is updated. Whenever the model
                is updated, the game board repaints itself and updates its status JPanel to
@@ -79,36 +58,3 @@ PennKey: ericmoon
                    contains the major game logic functions that represent how the game is played.
 
   Game - Main method run to start and run the game. Initializes the runnable game class.
-
-
-- Were there any significant stumbling blocks while you were implementing your
-  game (related to your design, or otherwise)?
-
-  I had difficulty implementing a way to decrement the number of ships. Every ship in my game is length 3.
-  Therefore, the number of ships should decrement only when all three coordinates corresponding to a ship are
-  hit by a player. I found this design idea difficult to implement. I had trouble coming up with a way that would
-  effectively decrement my ships only when the conditions were right.
-
-  Luckily, I found out I could use collections, more specifically tree maps.
-  This would allow me to map each ship to the 3 coordinates they are bound to. In this way, I was able to decrement
-  the number of ships remaining in the game by removing the ships from the map only when all coordinates
-  the ship is mapped to are guessed by the player.
-
-- Evaluate your design. Is there a good separation of functionality? How well is
-  private state encapsulated? What would you refactor, if given the chance?
-
-  I believe there is a good separation of functionality between my 3 classes. I did not run into trouble
-  determining which functions go where. The private state is well encapsulated because my SinglePlayerBS class
-  instantiates private instance variables that can be accessed in other classes through getter methods.
-  If given the chance to refactor, I would perhaps create more subclasses for my SinglePLayerBS class because
-  it holds a lot of different functions that are responsible for different parts of the game. This could potentially
-  be separated into different classes for better organization.
-
-
-
-========================
-=: External Resources :=
-========================
-
-- Cite any external resources (images, tutorials, etc.) that you may have used 
-  while implementing your game.
