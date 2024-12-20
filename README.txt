@@ -2,6 +2,8 @@
 CIS 1200 Game Project README
 =:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
 
+Run the Game.java file to play
+
 ===================
 =: Core Concepts :=
 ===================
