@@ -1,10 +1,5 @@
 package org.cis1200.battleship;
 
-/*
- * CIS 120 HW09 - TicTacToe Demo
- * (c) University of Pennsylvania
- * Created by Bayley Tuch, Sabrina Green, and Nicolas Corona in Fall 2020.
- */
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,22 +7,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 
-/**
- * This class instantiates a TicTacToe object, which is the model for the game.
- * As the user clicks the game board, the model is updated. Whenever the model
- * is updated, the game board repaints itself and updates its status JLabel to
- * reflect the current state of the model.
- * 
- * This game adheres to a Model-View-Controller design framework. This
- * framework is very effective for turn-based games. We STRONGLY
- * recommend you review these lecture slides, starting at slide 8,
- * for more details on Model-View-Controller:
- * https://www.seas.upenn.edu/~cis120/current/files/slides/lec37.pdf
- * 
- * In a Model-View-Controller framework, GameBoard stores the model as a field
- * and acts as both the controller (with a MouseListener) and the view (with
- * its paintComponent method and the status JLabel).
- */
 @SuppressWarnings("serial")
 public class GameBoard extends JPanel {
 
